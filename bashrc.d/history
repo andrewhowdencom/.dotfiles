@@ -1,0 +1,9 @@
+HISTIGNORE="x"
+
+# Disable Vault
+HISTIGNORE="${HISTIGNORE}:vault*"
+
+# Disable common commands that spam things
+HISTIGNORE="${HISTIGNORE}:cd*:ls*"
+
+export HISTIGNORE=${HISTIGNORE}
