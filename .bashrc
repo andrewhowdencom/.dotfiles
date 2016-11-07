@@ -1,5 +1,5 @@
 # Include all files in bashrc.d
-SCRIPT_PATH=$(realpath $0);
+SCRIPT_PATH=$(basename ${BASH_SOURCE});
 DIR=$(dirname ${SCRIPT_PATH})
 BASHRC_DIR="${DIR}"
 
