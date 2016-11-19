@@ -3,7 +3,7 @@
     "phpcs": {
       "type": "phpcs",
       "include": "(\\.(php|phtml)$)",
-      "bin": ["/home/ahowden/.config/composer/vendor/bin/phpcs"], 
+      "bin": ["/opt/composer/vendor/squizlabs/php_codesniffer/scripts/phpcs"], 
       "flags": [
           "--standard=ECG"
       ]
