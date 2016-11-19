@@ -1,5 +1,15 @@
 [core]
 	editor = /usr/bin/vim
+	hooksPath = /opt/git-hooks/
+	notesRef = true
+
+[commit]
+	gpgSign = true
+	template = /opt/git-hooks/GIT_COMMIT
+[push]
+#	gpgSign = true
+[format]
+	pretty = oneline
 
 [alias]
 	co = 'checkout'
