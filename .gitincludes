@@ -9,7 +9,8 @@
 [push]
 #	gpgSign = true
 [format]
-	pretty = oneline
+	pretty = "format:%C(#FFD700)%h%C(reset)%C(#ff69b4)%d%C(reset) %s\n→ %aN <%aE>\n\n%b"
+
 
 [alias]
 	co = 'checkout'
