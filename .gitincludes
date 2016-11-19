@@ -9,7 +9,7 @@
 [push]
 #	gpgSign = true
 [format]
-	pretty = "format:%C(#FFD700)%h%C(reset)%C(#ff69b4)%d%C(reset) %s\n→ %aN <%aE>\n\n%b"
+	pretty = "format:%C(#FFD700)%h%C(reset)%C(#ff69b4)%d%C(reset) %s\n→ (%G?) %aN <%aE>\n%+b"
 
 
 [alias]
