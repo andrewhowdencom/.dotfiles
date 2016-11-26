@@ -11,6 +11,7 @@ call vundle#begin()
 
 " Vundle Plugins
 Plugin 'vim-syntastic/syntastic'
+Plugin 'airblade/vim-gitgutter'
 
 " Close the bundle, restore settings
 call vundle#end()
