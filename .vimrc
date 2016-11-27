@@ -30,6 +30,9 @@ let g:syntastic_check_on_wq = 0
 " Enable the git commit
 au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 
+" Expand tabs by default
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
 
