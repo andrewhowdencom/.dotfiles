@@ -10,7 +10,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Vundle Plugins
-Plugin 'vim-syntastic/syntastic'
 Plugin 'airblade/vim-gitgutter'
 
 " Close the bundle, restore settings
