@@ -19,3 +19,6 @@
 	# Cleans up any branches locally that are not also on the remote
 	# See http://stackoverflow.com/questions/7726949/remove-local-branches-no-longer-on-remote
 	clean-local-branches = "!f() { git fetch -p && for branch in `git branch -vv | grep ': gone]' | gawk '{print $1}'`; do git branch -D $branch; done }; f"
+	# Show the git root
+	# See http://stackoverflow.com/questions/957928/is-there-a-way-to-get-the-git-root-directory-in-one-command
+	root = rev-parse --show-toplevel
