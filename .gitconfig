@@ -1,6 +1,10 @@
 # This is Git's per-user configuration file.
 [core]
-	excludesfile = ~/.gitignore
+	excludesFile = ~/.gitignore
+	attributesFile = ~/.gitattributes
 [include]
 	path = ~/.gitauthor
 	path = ~/.gitincludes
+
+[diff "image"]
+	command = /opt/git-hooks/bin/git-imgdiff
