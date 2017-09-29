@@ -16,9 +16,12 @@
 	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch -f --env-filter \"if [ \\\"$`echo $VAR`\\\" = '$OLD' ]; then export $VAR='$NEW'; fi\" $@; }; f "
 	lola = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	lolb = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+        wherethefuck = "!f() { git log --graph --decorate $(git rev-list -g --all); }; f "
 	# Cleans up any branches locally that are not also on the remote
 	# See http://stackoverflow.com/questions/7726949/remove-local-branches-no-longer-on-remote
 	clean-local-branches = "!f() { git fetch -p && for branch in `git branch -vv | grep ': gone]' | gawk '{print $1}'`; do git branch -D $branch; done }; f"
 	# Show the git root
 	# See http://stackoverflow.com/questions/957928/is-there-a-way-to-get-the-git-root-directory-in-one-command
 	root = rev-parse --show-toplevel
+        search = "!f() { git log | fzf --ansi --preview-window wrap --preview 'git log --grep={+}'; }; f"
+

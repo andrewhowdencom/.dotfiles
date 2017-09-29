@@ -123,3 +123,17 @@ if has('langmap') && exists('+langremap')
   set nolangremap
 endif
 
+
+" vim -b : edit binary using xxd-format!
+augroup Binary
+  au!
+  au BufReadPre  *.xxd let &bin=1
+  au BufReadPost *.xxd if &bin | %!xxd
+  au BufReadPost *.xxd set ft=xxd | endif
+  au BufWritePre *.xxd if &bin | %!xxd -r
+  au BufWritePre *.xxd endif
+  au BufWritePost *.xxd if &bin | %!xxd
+  au BufWritePost *.xxd set nomod | endif
+augroup END
+
+
